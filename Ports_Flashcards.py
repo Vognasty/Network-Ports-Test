@@ -60,7 +60,7 @@ while currentNum <= int(questNum):
     port = (portsAndProtocols.get(protocol))
 
     #Asks what they think the port number is
-    answer = input('What is the port number for ' + protocol + '? ')
+    answer = input(str(currentNum) + '. What is the port number for ' + protocol + '? ')
 
     
 
@@ -75,7 +75,7 @@ while currentNum <= int(questNum):
     currentNum += 1
 
 #Variable to hold grade
-gradeNum = ((int(corrNum)/int(questNum)) * 100)
+gradeNum = round(((int(corrNum)/int(questNum)) * 100), 1)
 
 #Prints how many correct out of total number of questions
 print('You got ' + str(corrNum) + ' out of ' + str(questNum) + ' correct.\nThat\'s ' + str(gradeNum) + ' percent.')
